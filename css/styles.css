@@ -806,6 +806,7 @@ svg{
     top: 50%;
     transform: translate(-50% -50%);
     cursor: pointer;
+    padding: 40px;
 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translate(-50%, -50%) scale(1);
@@ -833,3 +834,93 @@ svg{
     cursor: pointer;
 }
 
+
+
+
+.modal-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--color-titel-nav);
+
+    margin-top: 0;
+    margin-bottom: 12px;
+    
+}
+
+
+.form-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    
+}
+
+
+.modal-imput {
+   /* width: 100%; */
+    height: 40px;
+    padding: 11px 42px;
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+}
+
+.modal-wrapper {
+    margin-top: 4px;
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.modal-icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-imput:focus,
+.modal-imput:active {
+    outline: none;
+
+    border-color: var(--color-accent)
+}
+
+.modal-imput:focus + .modal-icon {
+    fill: var(--color-accent);
+}
+
+.form-comment {
+    /* width: 100%; */
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.form-comment:focus,
+.foem-comment:active{
+    outline: none;
+
+    border-color: var(--color-accent);
+}
