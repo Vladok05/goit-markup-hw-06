@@ -242,10 +242,18 @@ svg{
     text-transform: uppercase;
 }
 
-.button-hero {
-    border-radius: 4px;
-    padding: 10px 32px;
+.button-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 200px;
+    height: 50px;
     margin: 0 auto;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+
 
 
     background-color: var(--color-accent);
@@ -254,11 +262,12 @@ svg{
     font-weight: 700;
     line-height: 1.9;
     letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-hero:hover,
-.button-hero:focus {
+.button-main:hover,
+.button-main:focus {
     color: var(--color-accent-two);
     background-color: var(--button-active);
     
@@ -288,7 +297,8 @@ svg{
     margin-right: 30px;
 }
 
-.section-titel-hidden {
+.section-titel-hidden,
+.checkbox-imput {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -661,6 +671,7 @@ svg{
 .main-footer {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 .footer {
@@ -731,12 +742,60 @@ svg{
     color: var(--color-accent);
 }
 
+.decor-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.form-actions {
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--color-accent-two);
+
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-input {
+width: 358px;
+height: 50px;
+font-weight: 400;
+padding: 15px 16px;
+background-color: var(--background-color-hero);
+color: var(--color-accent-two);
+outline: none;
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-input:focus {
+ border-color: var(--color-accent);
+}
+
+.footer-form-icon {
+    fill: var(--color-accent-two);
+}
+
+
 /* !social-icon */
 
 .footer-social{
     display: flex;
     flex-direction: column;
-    margin-left: 70px;
 }
 
 .footer-titel {
@@ -864,33 +923,37 @@ svg{
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
-    
+    cursor: pointer;
 }
 
 
 .modal-imput {
-   /* width: 100%; */
+    width: 100%;
     height: 40px;
     padding: 11px 42px;
     border: 1px solid #2196F3;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
+
+
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: block;
 }
 
 .modal-wrapper {
     margin-top: 4px;
     position: relative;
     margin-bottom: 10px;
+    display: block;
 
 }
 
 .modal-icon {
     position: absolute;
-    top: 11px;
+    top:50%;
     left: 12px;
+    transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .modal-imput:focus,
@@ -905,7 +968,7 @@ svg{
 }
 
 .form-comment {
-    /* width: 100%; */
+    width: 100%;
     height: 120px;
     padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -924,3 +987,59 @@ svg{
 
     border-color: var(--color-accent);
 }
+
+
+
+.checkbox-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.checkbo-wrapper {
+    width: 16px;
+    position: relative;
+    margin-right: 8px;
+}
+
+.checkbox-icon { 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 1;
+
+    transform: translateY(-50%);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-icon-check {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0;
+
+    transform: translateY(-50%);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-imput:checked + .checkbo-wrapper .checkbox-icon {
+    opacity: 0;
+}
+
+.checkbox-imput:checked + .checkbo-wrapper .checkbox-icon-check {
+    opacity: 1;
+}
+
+.checkbox-link {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+
